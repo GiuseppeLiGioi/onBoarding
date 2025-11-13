@@ -4,19 +4,22 @@ import { useAppContext } from "../contexts/AppContext"
 export default function New2Screen(){
     const {stateToView, updateState} = useAppContext()
     return(
-              <View style={styles.container}>
-                      <TextInput 
-                      placeholder="Inserisci il testo..."
-                      placeholderTextColor="black"
-                      value={stateToView}
-                      onChangeText={updateState}
-                      style={styles.inputStyle}                           
-                      />
-          
-                      <Text style={styles.text}>Hai scritto: {stateToView}</Text>
-          
-                      
-                         
-                  </View>
+               <View style={styles.container}>
+            <View style={styles.containerInput}>
+
+            <TextInput 
+            placeholder="Inserisci il testo..."
+            placeholderTextColor="black"
+            value={stateToView}
+            onChangeText={updateState}
+            style={styles.inputStyle}                           
+            />
+            </View>
+
+            <Text style={styles.text}>Hai scritto: {stateToView}</Text>
+
+            
+               
+        </View>
       )
 }

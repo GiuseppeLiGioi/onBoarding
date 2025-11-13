@@ -9,6 +9,8 @@ export default function HomeScreen(){
 
     return(
         <View style={styles.container}>
+            <View style={styles.containerInput}>
+
             <TextInput 
             placeholder="Inserisci il testo..."
             placeholderTextColor="black"
@@ -18,6 +20,7 @@ export default function HomeScreen(){
                                         Con onChange normale updateState((e) => setStateToView(e.target.value))*/
             style={styles.inputStyle}                           
             />
+            </View>
 
             <Text style={styles.text}>Hai scritto: {stateToView}</Text>
 
