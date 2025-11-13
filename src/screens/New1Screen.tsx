@@ -15,6 +15,7 @@ export default function New1Screen(){
             style={styles.inputStyle}                           
             />
             </View>
+            
 
             <Text style={styles.text}>Hai scritto: {stateToView}</Text>
 
