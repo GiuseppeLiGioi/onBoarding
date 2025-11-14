@@ -45,13 +45,35 @@ export const styles = StyleSheet.create({
     },
 
     taskList:{
-        padding: 10,
+        padding: 30,
         borderRadius: 10,
         borderWidth: 2,
         borderColor: "white",
         marginTop: 20,
-        minWidth: "60%",
+        minWidth: "90%",
 
 
+    },
+
+    containerSingleTask: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: 5,
+        gap: 20
+    },
+
+    deleteButton: {
+      padding: 10,
+        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: "white",
+        backgroundColor: "white"
+    },
+
+    textDelete: {
+        color: "black",
+        fontSize: 12,
+        textAlign: "center"
     }
 })
