@@ -1,79 +1,109 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    container: {
-        alignItems: "center",
-        alignSelf: "center",
-        marginTop: 30,
-        backgroundColor: "black",
-        padding: 20,
-        width: "100%"
+  container: {
+    alignItems: "center",
+    alignSelf: "center",
+    marginTop: 30,
+    backgroundColor: "black",
+    padding: 20,
+    width: "100%",
+  },
 
-    },
+  containerInput: {
+    backgroundColor: "white",
+    padding: 20,
+    width: "100%",
+    borderWidth: 2,
+    borderRadius: 15,
+  },
 
-    containerInput: {
-        backgroundColor: "white",
-        padding: 20,
-        width: "100%",
-        borderWidth: 2,
-        borderRadius: 15
-    },
+  inputStyle: {
+    padding: 10,
+    borderColor: "blue",
+    borderWidth: 2,
+    minWidth: "70%",
+    borderRadius: 15,
+  },
 
-    inputStyle: {
-        padding: 10,
-        borderColor: "blue",
-        borderWidth: 2,
-        minWidth: "70%",
-        borderRadius: 15,
+  textAdd: {
+    color: "black",
+    fontSize: 12,
+  },
 
-    },
+  buttonAdd: {
+    padding: 10,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "blue",
+    marginTop: 10,
+    maxWidth: "50%",
+    alignSelf: "center",
+  },
 
-    textAdd: {
-        color: "black",
-        fontSize: 12,
-    },
+  taskList: {
+    padding: 30,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "white",
+    marginTop: 20,
+    minWidth: "90%",
+  },
 
-      buttonAdd: {
-        padding: 10,
-        borderRadius: 10,
-        borderWidth: 2,
-        borderColor: "blue",
-        marginTop: 10,
-        maxWidth: "50%",
-        alignSelf: "center"
+  containerSingleTask: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 5,
+    gap: 20,
+  },
 
-    },
+  deleteButton: {
+    padding: 10,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "white",
+    backgroundColor: "white",
+  },
 
-    taskList:{
-        padding: 30,
-        borderRadius: 10,
-        borderWidth: 2,
-        borderColor: "white",
-        marginTop: 20,
-        minWidth: "90%",
+  textDelete: {
+    color: "black",
+    fontSize: 12,
+    textAlign: "center",
+  },
 
+  overlay: {
+    width: "100%",
+    height: "100%",
+    backgroundColor: "gray",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
-    },
+  containerModal: {
+    width: "85%",
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 10,
+    borderWidth: 2,
+    borderColor: "blue",
+  },
 
-    containerSingleTask: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: 5,
-        gap: 20
-    },
+  containerButtonsModal: {
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 10,
+  },
 
-    deleteButton: {
-      padding: 10,
-        borderRadius: 10,
-        borderWidth: 2,
-        borderColor: "white",
-        backgroundColor: "white"
-    },
+  modalButton: {
+    padding: 5,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: "blue",
+  },
 
-    textDelete: {
-        color: "black",
-        fontSize: 12,
-        textAlign: "center"
-    }
-})
+  textModal: {
+    fontSize: 14,
+    color: "black",
+  },
+});
