@@ -7,17 +7,17 @@ export default function HomeScreen() {
   const { addTask, tasks, deleteTask } = useAppContext();
   const [title, setTitle] = useState<string>("");
 
-  function handleSubmit() {
+  function handleSubmit(): boolean {
     if (title) {
       addTask(title);
       setTitle("");
+      return true;
     }
+    return false;
   }
 
-  function handleDelete(id: number) {
-    if (id) {
-      deleteTask(id);
-    }
+  function handleDelete(id: number): boolean {
+    return id ? deleteTask(id) : false;
   }
 
   return (
