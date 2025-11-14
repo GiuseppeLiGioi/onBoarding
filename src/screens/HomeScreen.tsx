@@ -4,8 +4,7 @@ import { useState } from "react";
 import { useAppContext } from "../contexts/AppContext";
 
 export default function HomeScreen() {
-  const { stateToView, updateState, addTask, tasks, deleteTask } =
-    useAppContext();
+  const { addTask, tasks, deleteTask } = useAppContext();
   const [title, setTitle] = useState<string>("");
 
   function handleSubmit() {
