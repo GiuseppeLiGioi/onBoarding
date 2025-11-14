@@ -42,7 +42,9 @@ export default function EditModal({
     <Modal visible={visible}>
       <View style={styles.overlay}>
         <View style={styles.containerModal}>
-          <Text>Modifica il Task</Text>
+          <Text style={{ marginBottom: 20, textAlign: "center", fontSize: 18 }}>
+            Modifica il Task
+          </Text>
 
           <TextInput
             style={styles.inputStyle}

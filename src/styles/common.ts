@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
     borderColor: "blue",
     borderWidth: 2,
     minWidth: "70%",
+    textAlign: "center",
     borderRadius: 15,
   },
 
@@ -51,19 +52,27 @@ export const styles = StyleSheet.create({
   },
 
   containerSingleTask: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
     padding: 5,
     gap: 20,
+    marginTop: 10,
   },
 
-  deleteButton: {
+  optionButton: {
     padding: 10,
     borderRadius: 10,
     borderWidth: 2,
     borderColor: "white",
     backgroundColor: "white",
+  },
+
+  containerButtonsList: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 10,
+    width: "100%",
   },
 
   textButton: {
@@ -84,19 +93,21 @@ export const styles = StyleSheet.create({
     width: "85%",
     backgroundColor: "white",
     borderRadius: 20,
-    padding: 10,
+    padding: 20,
     borderWidth: 2,
     borderColor: "blue",
   },
 
   containerButtonsModal: {
-    justifyContent: "space-between",
+    flexDirection: "row",
+    justifyContent: "center",
     alignItems: "center",
     padding: 10,
+    gap: 20,
   },
 
   modalButton: {
-    padding: 5,
+    padding: 10,
     borderRadius: 20,
     borderWidth: 2,
     borderColor: "blue",

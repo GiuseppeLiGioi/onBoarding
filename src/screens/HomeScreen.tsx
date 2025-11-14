@@ -69,16 +69,16 @@ export default function HomeScreen() {
                 {t.title}
               </Text>
 
-              <View>
+              <View style={styles.containerButtonsList}>
                 <TouchableOpacity
-                  style={styles.deleteButton}
+                  style={styles.optionButton}
                   onPress={() => handleDelete(t.id)}
                 >
                   <Text style={styles.textButton}>Rimuovi Task</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                  style={styles.deleteButton}
+                  style={styles.optionButton}
                   onPress={() => {
                     setIsModalVisible(true);
                     setInitialValue(t.title);
