@@ -66,7 +66,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "white",
   },
 
-  textDelete: {
+  textButton: {
     color: "black",
     fontSize: 12,
     textAlign: "center",

@@ -2,10 +2,14 @@ import { View, TextInput, Text, TouchableOpacity } from "react-native";
 import { styles } from "../styles/common";
 import { useState } from "react";
 import { useAppContext } from "../contexts/AppContext";
+import EditModal from "../components/EditModal";
 
 export default function HomeScreen() {
-  const { addTask, tasks, deleteTask } = useAppContext();
+  const { addTask, tasks, deleteTask, editTask } = useAppContext();
   const [title, setTitle] = useState<string>("");
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+  const [selectedTaskId, setSelectedTaskId] = useState<number>();
+  const [initialValue, setInitialValue] = useState<string>("");
 
   function handleSubmit(): boolean {
     if (title) {
@@ -17,7 +21,18 @@ export default function HomeScreen() {
   }
 
   function handleDelete(id: number): boolean {
-    return id ? deleteTask(id) : false;
+    return id > 0 ? deleteTask(id) : false;
+  }
+
+  function handleEditSubmit(title: string): boolean {
+    if (selectedTaskId !== undefined) {
+      return editTask(selectedTaskId, title);
+    }
+    return false;
+  }
+
+  function onClose() {
+    setIsModalVisible(false);
   }
 
   return (
@@ -53,16 +68,37 @@ export default function HomeScreen() {
               >
                 {t.title}
               </Text>
-              <TouchableOpacity
-                style={styles.deleteButton}
-                onPress={() => handleDelete(t.id)}
-              >
-                <Text style={styles.textDelete}>Rimuovi Task</Text>
-              </TouchableOpacity>
+
+              <View>
+                <TouchableOpacity
+                  style={styles.deleteButton}
+                  onPress={() => handleDelete(t.id)}
+                >
+                  <Text style={styles.textButton}>Rimuovi Task</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={styles.deleteButton}
+                  onPress={() => {
+                    setIsModalVisible(true);
+                    setInitialValue(t.title);
+                    setSelectedTaskId(t.id);
+                  }}
+                >
+                  <Text style={styles.textButton}>Modifica Task</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           ))}
         </View>
       )}
+
+      <EditModal
+        visible={isModalVisible}
+        onClose={onClose}
+        onSubmit={handleEditSubmit}
+        initialValue={initialValue}
+      />
     </View>
   );
 }
