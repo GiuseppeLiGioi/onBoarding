@@ -51,6 +51,17 @@ export const styles = StyleSheet.create({
     minWidth: "90%",
   },
 
+  taskListDark: {
+    padding: 30,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: "white",
+    backgroundColor: "black",
+    width: "100%",
+    alignSelf: "center",
+    marginTop: 20,
+  },
+
   containerSingleTask: {
     justifyContent: "center",
     alignItems: "center",

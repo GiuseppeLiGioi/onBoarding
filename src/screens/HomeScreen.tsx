@@ -61,9 +61,8 @@ export default function HomeScreen() {
       {tasks && tasks.length > 0 && (
         <View style={styles.taskList}>
           {tasks.map((t) => (
-            <View style={styles.containerSingleTask}>
+            <View style={styles.containerSingleTask} key={t.id}>
               <Text
-                key={t.id}
                 style={{ marginBottom: 5, color: "white", textAlign: "center" }}
               >
                 {t.title}
